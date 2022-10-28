@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>福建师范大学教务处</title>
+        <link type="text/css" rel="stylesheet" href="exam01.css">
+        <script>
+            function $(className){
+                return document.getElementsByClassName(className);
+            }
+            function getLocalDate(){
+               var date=new Date();
+               var p1=$("p1")[0];
+               var msg=date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+" 星期";
+               var s="",d=date.getDay();
+               if(d==1) s="一";
+               else if(d==2) s="二";
+               else if(d==3) s="三";
+               else if(d==4) s="四";
+               else if(d==5) s="五";
+               else if(d==6) s="六";
+               else if(d==0) s="日";
+                p1.innerText=msg+s;
+            }
+        </script>
+    </head>
+    <body onload="getLocalDate()">
+        <div id="head">
+            <div id="head_top">
+                <p class="p1">2020年11月3日星期二</p>
+                <p class="p2">旧版回顾</p>
+            </div>
+        </div>
+        <div id="banner">
+            <div id="logo">
+                <a href="#"><img src="../img/logo.png" alt="" class="p3"></a>
+                <img src="../img/xiaoxun.png" alt="" class="p4">
+            </div>
+            <div id="nav">
+                <ul class="u1">
+                    <li><a href="#">师大首页</a></li>
+                    <li><a href="#">网站首页</a></li>
+                    <li><a href="#">科室设置</a></li>
+                    <li>
+                        <a href="#">规章制度</a>
+                        <ul>
+                            <li><a href="#">上级文件</a></li>
+                            <li><a href="#">学校文件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">教学研究</a>
+                        <ul>
+                            <li><a href="#">领导讲话</a></li>
+                            <li><a href="#">重要文件</a></li>
+                            <li><a href="#">院系经验</a></li>
+                        </ul>
+                    </li>
+                    <li class="l1">
+                        <a href="#">教学建设与发展</a>
+                        <ul>
+                            <li><a href="#">专业</a></li>
+                            <li><a href="#">教师</a></li>
+                            <li><a href="#">课程</a></li>
+                            <li><a href="#">教材</a></li>
+                        </ul>
+                    </li>
+                    <li class="l1">
+                        <a href="#">教学进行与保障</a>
+                        <ul>
+                            <li><a href="">学籍管理</a></li>
+                            <li><a href="">学位管理</a></li>
+                            <li><a href="">成绩管理</a></li>
+                            <li><a href="">选课管理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div id="content">
+            <div id="left">
+                <div class="top">
+                    <p class="p5">通知公告</p>
+                    <p class="p6">更多>></p>
+                </div>
+            </div>
+            <div id="right">
+                <div class="top">
+                    <p class="p5">工作动态</p>
+                    <p class="p6">更多>></p>
+                </div>
+            </div>
+        </div>  
+        <div id="footer">
+            <p>版权所有&copy;福建师范大学教务处</p>
+        </div>
+    </body>
+</html>
