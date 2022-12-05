@@ -203,15 +203,31 @@ function ImgBox(){
 
 //尾部更换内容
 function ChangeFooter(){
-    var h4=document.getElementById('footer1').getElementsByTagName('h4');
-    console.log(h4);
+    var footer1=document.getElementById('footer1');
+    var h4=footer1.getElementsByTagName('h4');
+    // 控制高度
+    var f_con=footer1.getElementsByClassName('f_con')[0];
+    var div=f_con.getElementsByTagName('div');
+    // var f_con_p=footer1.getElementsByClassName('f_con_p')[0];
+    // var f_con_p1=footer1.getElementsByClassName('f_con_p1')[0];
+    // var f_con_p2=footer1.getElementsByClassName('f_con_p2')[0];
+    // console.log(h4);
     for(var i=0;i<h4.length;i++){
         h4[i].onclick=function(){
             for(var j=0;j<h4.length;j++){
                 if(this==h4[j]){
                     h4[j].className='b1';
+                    div[j].style.display='block';
+                    if(j==0){
+                        f_con.style.height='180px';
+                    }else if(j==1){
+                        f_con.style.height='50px';
+                    }else{
+                        f_con.style.height="190px";
+                    }
                 }else{
                     h4[j].className="";
+                    div[j].style.display='none';
                 }
             }
         }

@@ -819,6 +819,7 @@ input{
     width: 838px;
     height: 301px;
     margin-top: 20px;
+    display: flex;
     
 }
 #center2 .cn_left{
@@ -1311,20 +1312,24 @@ input{
     position: absolute;
     top: 0px;
 }
-#footer1 .f_con_p1{
-    height: 20px;
+#footer1 .f_con_p1,#footer1 .f_con_p2{
     display: none;
 }
-#footer1 .f_con_p2{
-    width: 969px;
+#footer1 .f_con_p2 .f_l,#footer1 .f_con_p2 .f_r{
+    float: left;
+    width: 480px;
     height: 152px;
-    display: none;
 }
 #footer1 .f_con a{
     padding-right: 10px;
     padding-top: 6px;
     font-size: 12px;
     color: #5d5d5d;
+}
+#footer1 .f_con_p2 a {
+    padding-right: 5px;
+    padding-top: 6px;
+    display: inline-block;
 }
 #footer1 a:hover{
     text-decoration: underline;
