@@ -25,7 +25,7 @@ function ChangeLogoColor(){
     for(var i=0;i<li.length;i++){
         li[i].onmouseover=function(){
             this.style.backgroundImage='url(../images/江苏门户_36.gif)';/*补图 */
-            this.style.backgroundRepeat="repeat-x";
+            this.style.backgroundRepeat="repeat";
             this.getElementsByTagName('a')[0].style.color='#0227d9';
             // this.style.z-index='1';
             // console.log( this.style.backgroundColor);
