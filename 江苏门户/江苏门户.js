@@ -218,6 +218,13 @@ function ChangeFooter(){
     }
 }
 window.onload=function(){
+    fontSize = ()=>{
+        const clientWidth = document.documentElement.clientWidth;
+        const  n = 20*(clientWidth/380) > 40?40:20*(clientWidth/380);
+        document.documentElement.style.fontSize = n + 'px';
+    }
+    window.addEventListener('load',fontSize);
+    window.addEventListener('resize',fontSize);
     hotChange();
     ChangeLogoColor();
     ImgBox();
