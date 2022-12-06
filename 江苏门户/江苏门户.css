@@ -84,6 +84,7 @@ input{
     border: 1px solid #003c72;
     border-radius: 5px;
     font-size: 10px;
+    cursor: pointer;
 }
 
 /* 头部中间logo */
@@ -1282,7 +1283,7 @@ input{
 }
 /* 尾部部分1*/
 #footer1{
-    height: 215px;
+    /* height: 215px; */
     width: 999px;
     margin-top: 24px;
 }

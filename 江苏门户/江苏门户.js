@@ -189,7 +189,7 @@ function ChangeContent(){
 }
 
 function ImgBox(){
-    var speed=100; //定义滚动速度
+    var speed=50; //定义滚动速度
     var center3=document.getElementById('center3');
     var imgbox=center3.getElementsByClassName('imgbox')[0];
     var span=imgbox.getElementsByTagName('span');
@@ -207,8 +207,11 @@ function ImgBox(){
         if(span[0].offsetWidth-imgbox.scrollLeft<0){
             imgbox.scrollLeft=0;
         }else{
-            ++imgbox.scrollLeft;
-        } 
+            // 浏览器缩放的时候,scrollTop + 1会被设置成 1 * window.devicePixelRatio, 如果结果小于1就会被判定成+ 0, 所以需要保证每次变化的值大于1
+            // devicePixelRatio 设备像素比
+            const radios = parseFloat((1 / window.devicePixelRatio).toFixed(2)) + 0.01;
+            imgbox.scrollLeft=imgbox.scrollLeft+radios;
+        }
     }
 }
 
