@@ -400,8 +400,18 @@ input{
     margin-top: 12px;
     width: 124px;
     height: 30px;
-    padding-left: 30px;
+    text-align: center;
+    /* padding-left: 35px; */
     cursor: pointer;
+    line-height: 30px;
+    color: red;
+    font-size: 14px;
+    background: url("../images/bb_03.gif") repeat;
+}
+#center1_center .right1_center .box2_top .rc_current{
+    background:#be0a13; 
+    color: white;
+    /* url("../images/bb_05.gif") repeat; */
 }
 .right1_center .box2_bottom{
     margin: 0px;
@@ -686,7 +696,6 @@ input{
     height: 20px;
     border: 1px solid #96cc8f;
     margin-bottom: 2px;
-    text-align: center;
 }
 #center2 .lf_top .img2{
     width: 53px;
@@ -1100,6 +1109,7 @@ input{
 #center3 .r_center li{
     width: 385px;
     height: 24px;
+    margin-left: 10px;
 }
 #center3 .r_center li a{
     line-height: 24px;
@@ -1244,18 +1254,19 @@ input{
     cursor: pointer;
     top: 228px;left: 340px;
 }
-#center3 .imgbox span{
-    /* margin-left: 17px; */
+/* #center3 .imgbox span{
+    /* margin-left: 17px; 
     height: 50px;
     width: 643px;
     display: inline-block;
-}
+} */
 #center3 .c3_rt_con .imgbox{
     overflow: hidden;
     height: 50px;
     position: relative;
     width: 310px;
     margin-left: 20px;
+    white-space: nowrap;
 }
 #center3 .c3_r3_footer{
     width: 364px;

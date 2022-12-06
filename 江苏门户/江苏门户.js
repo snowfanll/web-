@@ -100,14 +100,20 @@ function ChangeCenter1(){
     // console.log(a);
     for(var i=0;i<span.length;i++){
         span[i].onclick=function(){
+            for(var i=0;i<span.length;i++){
+                span[i].className="";
+            }
+            console.log(1);
             if(this==span[0]){
                 box_text.style.display='block';
                 box_text1.style.display='none';
-                console.log(1);
+                this.className="rc_current";
+                // console.log(1);
             }else{
                 if(this==span[1]){
                     box_text.style.display='none';
                     box_text1.style.display='block';
+                    this.className="rc_current";
                 }
             }
         }
@@ -182,16 +188,21 @@ function ChangeContent(){
     }
 }
 
-// 
 function ImgBox(){
     var speed=100; //定义滚动速度
     var center3=document.getElementById('center3');
     var imgbox=center3.getElementsByClassName('imgbox')[0];
     var span=imgbox.getElementsByTagName('span');
     imgbox.innerHTML+=imgbox.innerHTML;
-    // var imgl=document.getElementById('center3').getElementsByClassName('c3_c1');
-    // var imgr=document.getElementById('center3').getElementsByClassName('c3_c1');
+    var c3_c1=center3.getElementsByClassName('c3_c1')[0];
+    var c3_c2=center3.getElementsByClassName('c3_c2')[0];
     var time1=setInterval(Imgmove,speed);
+    c3_c1.onclick=function(){
+            imgbox.scrollLeft-=104;
+    }
+    c3_c2.onclick=function(){
+        imgbox.scrollLeft+=104;
+    }
     function Imgmove(){
         if(span[0].offsetWidth-imgbox.scrollLeft<0){
             imgbox.scrollLeft=0;
@@ -234,13 +245,6 @@ function ChangeFooter(){
     }
 }
 window.onload=function(){
-    fontSize = ()=>{
-        const clientWidth = document.documentElement.clientWidth;
-        const  n = 20*(clientWidth/380) > 40?40:20*(clientWidth/380);
-        document.documentElement.style.fontSize = n + 'px';
-    }
-    window.addEventListener('load',fontSize);
-    window.addEventListener('resize',fontSize);
     hotChange();
     ChangeLogoColor();
     ImgBox();
