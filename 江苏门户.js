@@ -7,11 +7,11 @@ function ShowText(){
     if(eye.f==undefined) eye.f=true;
     // eye.onclick=function(){   
         if(eye.f){
-            eye.src="../images/open.png";
+            eye.src="images/open.png";
             input.type="text";
             eye.f=false;
         }else{
-            eye.src="../images/close.png";
+            eye.src="images/close.png";
             input.type="password";
             eye.f=true;
         }
@@ -24,7 +24,7 @@ function ChangeLogoColor(){
     // var a=document.getElementById('nav_center').getElementsByTagName('a');
     for(var i=0;i<li.length;i++){
         li[i].onmouseover=function(){
-            this.style.backgroundImage='url(../images/江苏门户_36.gif)';/*补图 */
+            this.style.backgroundImage='url(images/江苏门户_36.gif)';/*补图 */
             this.style.backgroundRepeat="repeat";
             this.getElementsByTagName('a')[0].style.color='#0227d9';
             // this.style.z-index='1';
@@ -64,7 +64,7 @@ function ShowChild(id){
                 // 得到图片bline
                 var bline=this.getElementsByClassName('bline')[0];
                 // 图片转换
-                lt.src='../images/江苏门户_29.gif';
+                lt.src='images/江苏门户_29.gif';
                 lt.style.width='10px';
                 // var li0=this.getElementsByTagName('li');
                 // console.log(li0.length);
@@ -80,7 +80,7 @@ function ShowChild(id){
                 // 得到图片bline
                 var bline=this.getElementsByClassName('bline')[0];
                 // 图片转换
-                lt.src='../images/江苏门户_65.gif';
+                lt.src='images/江苏门户_65.gif';
                 lt.style.width='4px';
                 // 得到子元素li0
                 bline.style.top='20px';

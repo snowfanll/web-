@@ -37,7 +37,7 @@ header{
     text-align: center;
     vertical-align: middle;
     margin-top: 5px; /*未确定*/
-    background:url("../images/index_top_001.jpg")
+    background:url("images/index_top_001.jpg")
 }
 li{
     float: left;
@@ -95,7 +95,7 @@ input{
 }
 #logo_top{
     height: 118px;
-    background: url("../images/index_top_logo_bj.jpg") repeat-x;
+    background: url("images/index_top_logo_bj.jpg") repeat-x;
 }
 #logo img{
     width: 299px;
@@ -106,7 +106,7 @@ input{
     width: 999px;
     height: 50px;
     color: #820d00;
-    background: url("../images/index_top_logo_bj.jpg");
+    background: url("images/index_top_logo_bj.jpg");
 }
 #nav_center ul{
     width: 903px;
@@ -162,7 +162,7 @@ input{
     height: 816px;
     float: left;
     margin: 0px; 
-    background: url("../images/index_hms_06.jpg");
+    background: url("images/index_hms_06.jpg");
     background-size: 162px 816px;
 }
 .left1_top{
@@ -302,7 +302,7 @@ input{
     width: 318px;
 }
 .head0{
-    background: url("../images/index_zjs_00.jpg") -15px -12px no-repeat; 
+    background: url("images/index_zjs_00.jpg") -15px -12px no-repeat; 
     height: 24px;
     width: 318px;
 }
@@ -393,7 +393,7 @@ input{
     margin-top: 6px;
     margin-bottom: 0px;
     width: 364px;height: 46px;
-    background: url("../images/index_zxw_17.jpg");
+    background: url("images/index_zxw_17.jpg");
     background-size: 364px 46px;
 }
 #center1_center .right1_center .box2_top span{
@@ -407,7 +407,7 @@ input{
     line-height: 30px;
     color: red;
     font-size: 14px;
-    background: url("../images/bb_03.gif") repeat;
+    background: url("images/bb_03.gif") repeat;
 }
 #center1_center .right1_center .box2_top .rc_current{
     background:#be0a13; 
@@ -418,7 +418,7 @@ input{
     margin: 0px;
     position: relative;
     width: 364px;height: 168px;
-    background: url("../images/index_zxw_18.jpg");
+    background: url("images/index_zxw_18.jpg");
     background-size: 364px 168px;
 }
 #center1 .hr1{
@@ -442,7 +442,7 @@ input{
     margin-top: 4px;
     margin-left: 6px;
     overflow: hidden;
-    background: url("../images/江苏门户_66.png") -40px -52px;
+    background: url("images/江苏门户_66.png") -40px -52px;
     background-size: 520px 285px;
     height: 176px;
 }
@@ -760,7 +760,7 @@ input{
     width: 323px;
     height: 120px;
     position: relative;
-    background:url("../images/index_hms_04.jpg");
+    background:url("images/index_hms_04.jpg");
 }
 #center2 .right1 .bottom ul{
     padding-top: 27px;
@@ -790,7 +790,7 @@ input{
     width: 498px;
     height: 139px;
     position: relative;
-    background: url("../images/江苏门户_59.gif");
+    background: url("images/江苏门户_59.gif");
 }
 #center2 .right1_box .box_l1,#center2 .right1_box .box_r1{
     float: left;
@@ -802,7 +802,7 @@ input{
     margin-left: -5px;
     margin-top: -16px;
     position: absolute;
-    background:url("../images/index_hms_05.jpg");
+    background:url("images/index_hms_05.jpg");
 }
 #center2 .right_right1 .bottom ul{
     margin-top: 0px;
@@ -836,13 +836,13 @@ input{
     height: 310px;
     width: 558px;
     float: left;
-    background: url("../images/index_hms_12.jpg");
+    background: url("images/index_hms_12.jpg");
     background-position-y: bottom;
 }
 #center2 .cn_con_top{
     width: 558px;
     height: 44px;
-    background: url("../images/index_hms_09.jpg");  
+    background: url("images/index_hms_09.jpg");  
 }
 #center2 .cn_left img{
     float: left;
@@ -866,7 +866,7 @@ input{
     height: 248px;
     width: 558px;
     background-size: 549px 261px;
-    background: url("../images/index_hms_11.jpg");
+    background: url("images/index_hms_11.jpg");
     padding-top: 10px;
 }
 #center2 .cn_box1{
@@ -998,7 +998,7 @@ input{
     width: 800px;
     height:150px;
     margin-bottom: 10px;
-    background: url("../images/index_yjs_03.jpg") no-repeat;
+    background: url("images/index_yjs_03.jpg") no-repeat;
 }
 #center3 .r_top img{
     float: left;
@@ -1208,7 +1208,7 @@ input{
 #center3 .c3_rt_btop{
     width: 364px;
     height: 30px;
-    background: url("../images/江苏门户_150.gif") repeat-x;
+    background: url("images/江苏门户_150.gif") repeat-x;
 }
 #center3 .c3_rt_btop h3{
     float: left;
@@ -1274,7 +1274,7 @@ input{
     height: 28px;
     position: relative;
     top: 280px;
-    background: url(../images/江苏门户_193.gif) repeat-x;
+    background: url("images/江苏门户_193.gif") repeat-x;
 }
 #center3 .c3_r3_footer h4{
     color: #5b588b;
@@ -1309,7 +1309,7 @@ input{
 #footer1 .b1{
     border-bottom: 0px;
     font-weight: bold;
-    background: url("../images/index_xfw_07.jpg") -5px -5px;
+    background: url("images/index_xfw_07.jpg") -5px -5px;
 }
 #footer1 .f_con{
     width: 999px;
