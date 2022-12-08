@@ -247,10 +247,13 @@ function ChangeFooter(){
         }
     }
 }
+
+
 window.onload=function(){
     hotChange();
     ChangeLogoColor();
     ImgBox();
     ChangeCenter1()
     ChangeFooter();
+    getProvinces();
 }

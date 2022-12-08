@@ -5,7 +5,123 @@
     <title>江苏门户</title>
     <link type="text/css" rel="stylesheet" href="江苏门户.css" />
     <script src="江苏门户.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function $(id) {
+        return document.getElementById(id);
+      }
+      // 城市选择框
+      function setProvincesHtml(provinces) {
+        let info = "";
+        for (province of provinces) {
+          info += `<option value='${province.adcode}'>${province.name}</option>`;
+        }
+        $("provinces").innerHTML = info;
+      }
+      // 天气信息
+      function setWeathersHtml(weathers) {
+        let info = "";
+        // 设置日期
+        $("span_date").innerHTML = `${weathers[0].casts[0].date}`;
+        for (weather of weathers) {
+          info += `
+    <tr>
+      <td>${weather.city}</td>
+      <td>${weather.casts[0].dayweather}</td>
+      <td class='special'>
+        <span class='temp'>${weather.casts[0].daytemp}°</span>
+        <div class='line'></div>
+        <span class='temp_last'>${weather.casts[0].nighttemp}°</span></td>
+      <td>${weather.casts[0].daywind}</td>
+      <td>${weather.casts[0].daypower}</td>
+    </tr>
+    `;
+        }
+        $("weathers").innerHTML = info;
+        // <li>${weather.casts[0].humidity}</li>
+      }
+      axios.defaults.baseURL = "https://restapi.amap.com/v3";
+      function getProvinces() {
+        axios
+          .get("/config/district", {
+            params: {
+              keywords: "350000", //adcode
+              subdistrict: 1, //返回下一级的行政区
+              key: "dabaa73c6b7f2e2ee3db50c246b14eaf",
+            },
+          })
+          .then((res) => {
+            console.log(res);
+            console.log(res.data);
+            console.log(res.data.districts[0]);
+            let provinces = res.data.districts[0].districts.sort(function (
+              a,
+              b
+            ) {
+              //重写sort  按行政区排序
+              if (a.adcode < b.adcode) return -1;
+              else if (a.adcode > b.adcode) return 1;
+              else return 0;
+            });
+            console.log(provinces);
+            setProvincesHtml(provinces);
+            // getWeathers(); //默认显示天气
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      }
+      // 得到指定省份各地市的天气情况
+      function getWeathers() {
+        let index = $("provinces").selectedIndex;
+        let province = $("provinces").options[index].value;
+        // 获得指定省份地势列表
+        axios
+          .get("/config/district", {
+            params: {
+              keywords: province, //
+              subdistrict: 2, //返回下两级的行政区
+              key: "dabaa73c6b7f2e2ee3db50c246b14eaf",
+            },
+          })
+          .then((res) => {
+            console.log(res);
+            let cities = res.data.districts[0].districts.sort(function (a, b) {
+              //重写sort  按行政区排序
+              if (a.adcode < b.adcode) return -1;
+              else if (a.adcode > b.adcode) return 1;
+              else return 0;
+            });
+            let _getWeathers = [];
+            for (let i in cities) {
+              // 逐一提取各地市天气数据
+              _getWeathers[i] = axios.get("/weather/weatherInfo", {
+                params: {
+                  city: cities[i].adcode,
+                  extensions: "all",
+                  key: "dabaa73c6b7f2e2ee3db50c246b14eaf",
+                },
+              });
+            }
+            return axios.all(_getWeathers);
+          })
+          .then((res) => {
+            let weathers = [];
+            console.log(res);
+            for (let item of res) {
+              weathers.push(item.data.forecasts[0]);
+            }
+            console.log(weathers);
+            // 设置天气信息HTML
+            setWeathersHtml(weathers);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      }
+    </script>
   </head>
+
   <body>
     <div id="box">
       <header>
@@ -1118,5 +1234,11 @@
       <span>苏ICP备07000608号</span>
       <span>视听许可证1008318号</span>
     </footer>
+    <div id="forecast">
+      <select name="provinces" id="provinces"></select>
+      <input type="button" value="天气查询" onclick="getWeathers()" />
+      <span id="span_date"></span>
+      <table id="weathers"></table>
+    </div>
   </body>
 </html>

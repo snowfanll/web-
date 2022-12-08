@@ -6,7 +6,7 @@
 }
 body{
     width: 999px;
-    height: 3166px;
+    height: 3666px;
     margin: 0 auto;
     font-size: 14px;
 }
@@ -1369,3 +1369,40 @@ footer span{
     padding-right: 28px;
     color: #5d5d5d ;
 }
+
+
+/* 天气预报 */
+#forecast{
+    font-size: 14px;
+    width: 999px;
+    height: 400px;
+    /* float: left; */
+}
+#forecast table{
+    width: 999px;
+    background-image: linear-gradient(225deg, #D0DAE8, #CCD4DF 55%, #A5B3C5);
+}
+#forecast tr,td{
+    width: 150px;
+    text-align: center;
+    height: 20px;
+}
+#forecast #span_date{
+    float: right;
+    height: 20px;
+}
+#forecast .special{
+    width: 150px;
+}
+#forecast .temp,.temp_last{
+    float: left;
+}
+#forecast .line{
+    margin: 8px 5px;
+    float: left;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #F18360, #427BFF);
+}
+

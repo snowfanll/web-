@@ -1,0 +1,22 @@
+{
+  "name": "jiangsu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "江苏门户.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowfanll/web-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snowfanll/web-/issues"
+  },
+  "homepage": "https://github.com/snowfanll/web-#readme",
+  "dependencies": {
+    "axios": "^1.2.1"
+  }
+}
